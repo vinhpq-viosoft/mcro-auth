@@ -1,0 +1,34 @@
+{
+  "name": "mcro-core",
+  "version": "1.0.0",
+  "description": "It extends restify-core. It help us easy to make core micro service and generate APIs",
+  "main": "index.js",
+  "scripts": {
+    "start": "node --expose-gc --harmony-async-await index.js",
+    "test": "node --expose-gc --harmony-async-await test.js",
+    "gen": "node ./lib/generate/gen.js",
+    "pm2": "pm2 start index.js --node-args=\"--expose-gc --harmony-async-await\" --name mcro-core",
+    "dev": "cd ./web && npm run dev",
+    "route": "node ./web/webpack.import",
+    "create": "node ./web/tools-create"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/just4developments/restify-core.git"
+  },
+  "author": "just4developments@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "fs-path": "0.0.23",
+    "jimp": "^0.2.27",
+    "lodash": "^4.17.2",
+    "mongodb": "^2.2.22",
+    "node-uuid": "^1.4.7",
+    "redis": "^2.6.5",
+    "restify": "^4.3.0",
+    "unirest": "^0.5.1"
+  },
+  "devDependencies": {
+    "js-beautify": "^1.6.4"
+  }
+}
